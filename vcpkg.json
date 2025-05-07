@@ -2,6 +2,6 @@
   "name": "basicspaceshhoter",
   "version": "0.0.1",
   "dependencies": [
-    "sdl3"
+    "raylib"
   ]
 }

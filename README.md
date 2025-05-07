@@ -1,2 +1,2 @@
 # BasicShooter
-A basic Shoot'em Up with SDL3
+A basic Shoot'em Up with raylib

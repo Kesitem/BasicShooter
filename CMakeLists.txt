@@ -1,11 +1,20 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(BasicSpaceShooter VERSION 0.0.1
-                  DESCRIPTION "A simple OpenGL game engine"
+                  DESCRIPTION "A SDL3 game"
                   LANGUAGES CXX)
 
-find_package(SDL3 CONFIG REQUIRED)
+find_package(raylib CONFIG REQUIRED)
 
-add_executable(${PROJECT_NAME} main.cpp)
+# List files
+set(SRCS
+    main.cpp
+)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE SDL3::SDL3)
+
+add_executable(${PROJECT_NAME} ${SRCS})
+
+# Set C++17 feature
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
